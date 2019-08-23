@@ -1,0 +1,94 @@
+@import 'resets';
+//@import 'variables';
+@import 'variables';
+@import 'homeMain';
+@import 'footer';
+@import 'secHome';
+@import 'header';
+@import 'navbar';
+@import 'secAbout';
+@import 'secMenu';
+@import 'secContact';
+
+
+
+.header{
+
+  @include Dimension(100%,90px);
+  background: #CC7E85;
+  color: #F2B880;
+  padding: 8px;
+
+}
+
+.clearfix{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i}{
+    width: 100%/12 * $i;
+    float: left;
+  }
+} // end of for loop
+
+@media only screen and (min-width: 768px) {
+  #secHome, #secMenu, #secAbout, #secContact{
+	@include Dimension(100%,100vh);
+	float: left;
+}
+.col-4{
+  width: 65.333333%;
+  float: left;
+}
+.logo{
+  width: auto;
+}
+.fa-bars{
+  //display: none;
+}
+#close{
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  top: 70px;
+  right: 70%;
+}
+}
+
+@media only screen and (min-width: 1024px){
+  #secHome, #secMenu, #secAbout, #secContact{
+    @include Dimension(100%,100vh);
+    float: center;
+  }
+  #secHome{
+    .one{
+
+
+    background: $background;
+    .desktopImage{
+      display: block;
+      @include Dimension(100px,100px);
+
+      position: absolute;
+
+
+      //float: left;
+    }
+    }
+    }
+
+  .headerMenu{
+    display: block;
+   ul li{
+    display: inline;
+  }
+}
+
+#chicken h1{
+  text-align: center;
+}
+
+  }

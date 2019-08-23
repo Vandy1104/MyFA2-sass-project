@@ -1,0 +1,6 @@
+$background: lightpink;
+
+@mixin Dimension($w, $h){
+width: $w;
+height: $h;
+}

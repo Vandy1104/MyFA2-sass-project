@@ -1,0 +1,10 @@
+#secHome{
+  @include Dimension(100%,100vh);
+  background-image: url('../images/ihome1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desktopImage{
+  display: none;
+}
